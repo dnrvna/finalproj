@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Celebration Quiz</title>
+
+    <!-- Bootstrap CSS CDN link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Font Awesome CDN link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- Anime.js CDN link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+    <!-- Custom CSS file link -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+        <a href="#" class="logo">Birthday<span>Fun</span></a>
+        <div id="menu" class="fas fa-bars"></div>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="ideas.html">Ideas</a>
+            <a href="games.html">Games</a>
+            <a href="review.html">For you</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <h1 class="heading">Birthday Celebration Quiz</h1>
+
+    <!-- Quiz section -->
+    <div class="box">
+    <section class="quiz">
+        <div id="quiz-container" class="quiz-container">
+            <div id="question-container"></div>
+            <div id="options-container"></div>
+            <button id="next-btn" class="btn btn-primary">Next Question</button>
+            <div id="timer">Time Left: <span id="time">59</span> seconds</div>
+        </div>
+    </section>
+    </div>
+
+    <!-- footer section  -->
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>about us</h3>
+                <p>Discover Exciting Birthday Celebration Ideas!</p>
+            </div>
+
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="index.html">HomePage</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="games.html">Games</a>
+                <a href="ideas.html">Ideas</a>
+                <a href="review.html">For You</a>
+            </div>
+
+            <div class="box">
+                <h3>follow us</h3>
+                <a href="https://t.me/ddnrvnaa">telegram</a>
+                <a href="#">twitter</a>
+                <a href="https://instagram.com/ddnrvnaaa?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr">instagram</a>
+                <a href="#">linkedin</a>
+            </div>
+
+            <div class="box">
+                <h3>contact us</h3>
+                <p> <i class="fas fa-phone"></i> 87775862198 </p>
+                <p> <i class="fas fa-envelope"></i> 220259@astanait.edu.kz </p>
+                <p> <i class="fas fa-map-marker-alt"></i> Mangilik El, C1 </p>
+            </div>
+        </div>
+
+        <div class="credit"> created by <span> Aruzhan Oskembay </span> | all rights reserved </div>
+    </section>
+</div>
+
+<!-- Custom JS file link -->
+<script src="js/quiz.js"></script>
+<!-- Add the following script for playing a sound -->
+<script>
+    // Function to play a sound
+    function playSound() {
+        let audio = new Audio('sources/call-to-attention-123107.mp3'); // Use a relative path
+
+        // Event listener for when the audio can be played
+        audio.addEventListener('canplaythrough', () => {
+            audio.play();
+        });
+
+        // Event listener for errors
+        audio.addEventListener('error', (error) => {
+            console.error('Error loading or playing the sound:', error);
+        });
+    }
+
+    // Play the sound when the page loads
+    playSound();
+</script>
+</body>
+
+</html>
